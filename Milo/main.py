@@ -1,23 +1,25 @@
-from gradio_client import Client
+from google import genai
+import os
 
-client = Client("TirthGaikwad/gemini-elevenlabs-chatbot")
+# Il est préférable d'utiliser une variable d'environnement
+# api_key = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key="AIzaSyCbw88MBs6PBjMr9gXwiCSMTtDDDGtExD8")
 
-print("Chatbot prêt. Tapez 'quitter' pour arrêter la conversation.")
+print("Tapez 'quitter' pour arrêter la discussion.\n")
 
 while True:
-    user_message = input("Vous: ")
-
-    if user_message.lower() == "quitter":
-        print("Chatbot: Au revoir !")
+    user_message = input("Vous : ")
+    if user_message.lower() in ["quitter", "exit", "stop"]:
         break
 
     try:
-        # Envoie le message de l'utilisateur à l'IA
-        # Le résultat attendu est la réponse textuelle de l'IA
-        ai_response = client.predict(
-            message=user_message, api_name="/chat_bot_response"
+        # Utilisation de gemini-2.0-flash pour la rapidité
+        response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=user_message,
         )
-        print(f"Chatbot: {ai_response}")
+        # On accède au texte via .text
+        print(f"Chatbot : {response.text}")
+
     except Exception as e:
-        print(f"Une erreur est survenue lors de la communication avec l'IA : {e}")
-        print("Veuillez vérifier votre connexion internet ou l'état du service.")
+        print(f"\n[Erreur] : {e}")
