@@ -3,7 +3,7 @@ import os
 
 # Il est préférable d'utiliser une variable d'environnement
 # api_key = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key="AIzaSyCbw88MBs6PBjMr9gXwiCSMTtDDDGtExD8")
+client = genai.Client(api_key="")
 
 print("Tapez 'quitter' pour arrêter la discussion.\n")
 
