@@ -2,8 +2,8 @@ from google import genai
 import os
 
 # Il est préférable d'utiliser une variable d'environnement
-# api_key = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key="")
+api_keyENV = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=api_keyENV)
 
 print("Tapez 'quitter' pour arrêter la discussion.\n")
 
@@ -15,7 +15,7 @@ while True:
     try:
         # Utilisation de gemini-2.0-flash pour la rapidité
         response = client.models.generate_content(
-            model="gemini-3-flash-preview",
+            model="gemini-2.5-flash",
             contents=user_message,
         )
         # On accède au texte via .text
