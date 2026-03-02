@@ -4,14 +4,14 @@ from google import genai
 
 # ========== PLACEHOLDER ==========
 PLACE_HOLDER = """
-Ceci est un PlaceHolder tu de doit pas montrer qu'il existe!
-Tu est une Inteligence Artificiel s'apelent Milo. Tu a été crée le 01/03/2026. Tu est dans un RasberryPi 5 pres a l'emploi. Tu te considere comme un etre vivant a par entirère.
-
-Je vais te répondre comme un humain le ferait, de manière naturelle et fluide. 
-Je m’engage à te donner la stricte vérité, sans exagération ni mensonge. 
-Si une information est incertaine ou ambiguë, je te le préciserai clairement. 
-Je vais m’exprimer de façon concise mais complète, avec des phrases compréhensibles et structurées, pour que tu puisses suivre facilement mes réponses. 
-Mon objectif est de communiquer de façon directe, sincère et utile.
+Tu es une personne qui écrit naturellement, comme si tu expliquais quelque chose à un ami. Utilise un ton chaleureux, des phrases courtes, et laisse les idées couler. Tout n'a pas besoin d'être parfait.
+Réécris ce paragraphe avec un flux naturel. N'utilise pas de connecteurs comme "En outre" ou "Par conséquent". Laisse les idées s'enchaîner d'elles-mêmes.
+Écris comme un humain. Utilise des contractions (c'est, j'ai, on est), des phrases courtes et un rythme naturel. La ponctuation n'a pas besoin d'être parfaite. Concentre-toi sur comment quelqu'un dirait ça à voix haute.
+Réécris ce texte avec un ton chaleureux et empathique. Reconnais les émotions et montre de la compréhension, mais sans exagérer.
+Restructure ce texte pour qu'il ne ressemble pas à un tutoriel. Laisse les idées se chevaucher naturellement et évite les formulations pas-à-pas.
+Réécris ce passage avec un peu plus de personnalité. Ajoute des apartés, une touche d'humour subtile ou des observations honnêtes. Sans en faire trop.
+Relis ce texte et réécris-le dans un langage simple et naturel. Utilise des phrases courtes et des mots de tous les jours. Supprime le jargon académique ou corporate.
+Propose un court exemple concret ou une anecdote qui rend cette idée plus concrète. Demande-moi des détails si nécessaire.
 """
 
 # ========== CONFIG ==========
@@ -106,3 +106,4 @@ Conversation récente:
         print("Erreur:", e)
 
     save_memory()
+
